@@ -1,0 +1,28 @@
+@echo off
+title Box Volume Calculator
+color0e
+
+:start
+cls
+set /p unit=Enter measurment unit (cm, inch, foot, ect): 
+set /p l=Enter Length (no decimals): 
+set /p w=Enter Width (no decimals): 
+set /p h=Enter Height (no decimals): 
+cls
+
+set /a c=%l%*%w%*%h%
+cls
+
+echo.
+echo.
+echo LENGTH	: %l% %unit%
+echo WIDTH	: %w% %unit%
+ECHO HEIGHT	: %h% %unit%
+ECHO ======================
+ECHO.
+ECHO ANSWER	: %c% %unit%3
+echo.
+echo.
+echo.
+pause
+goto start

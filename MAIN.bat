@@ -13,7 +13,7 @@ echo     PASSWORD:____________
 echo.
 echo.
 echo.
-Set USERNAME: 
+
 set /p USERNAME=ENTER USERNAME: 
 
 :login_pass
@@ -27,7 +27,7 @@ echo     PASSWORD:____________
 echo.
 echo.
 echo.
-Set PASSWORD: 
+
 set /p PASSWORD=ENTER PASSWORD: 
 
 :login_check
@@ -41,8 +41,8 @@ echo     PASSWORD:%PASSWORD%
 echo.
 echo.
 echo.
-set [PRESS_ENTER]
-set /p [PRESS_ENTER]=[PRESS_ENTER]
+
+set /p PRESS_ENTER=[PRESS_ENTER]
 goto login_usercheck
 
 :login_usercheck
@@ -65,7 +65,7 @@ goto login_user
 
 :user_good
 cls
-if %password%==dorifto goto login_success
+if %PASSWORD%==dorifto goto login_success
 goto pass_bad
 
 :pass_bad
@@ -82,7 +82,7 @@ echo.
 pause
 goto login_user
 
-login_success
+:login_success
 cls
 echo.
 echo.
